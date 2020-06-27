@@ -45,8 +45,12 @@ class Personagem extends Animacao {
   }
 
   anda(direcao) {
-    if (direcao === 1)
-      this.x += 10;
+
+    if (direcao === 1) {
+      if (this.x < windowWidth-this.largura) {
+        this.x += 10;
+      }
+    }
     else if (direcao === 0)
       if (this.x > 0) {
         this.x -= 10;
