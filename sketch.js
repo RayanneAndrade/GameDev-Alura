@@ -1,10 +1,10 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  frameRate(30);
+  frameRate(35);
   masterVolume(0.1);
 
-  botaoGerenciador = new BotaoGerenciador('INICIAR', width / 2, height / 2);
+  botaoGerenciador = new BotaoGerenciador('INICIAR', width / 2, height / 2, 'iniciar');
   telaInicial = new TelaInicial();
   jogo = new Jogo();
 

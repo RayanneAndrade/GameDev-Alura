@@ -10,6 +10,7 @@ class Personagem extends Animacao {
     this.gravidade = 3;
     this.limitePulo = 2;
     this.contaPulo = 0;
+    this.colisao = false;
   }
 
   pula(somDoPulo) {
@@ -39,8 +40,20 @@ class Personagem extends Animacao {
     let precisaoLar = 0.8;
     let precisao = 0.7;
 
-    const colisao = collideRectCircle(this.x, this.y, this.largura, this.altura, inimigo.x + inimigo.largura/2+15, inimigo.y + inimigo.altura/2, inimigo.largura*precisao);
+    //collideDebug(true);
+    //fill(100);
+    //rect(this.x+20, this.y, this.largura*precisao, this.altura);
+    //circle((inimigo.x + (inimigo.largura/2))+25, (inimigo.y + (inimigo.altura/2)), inimigo.largura*precisao);
     
+    
+    const colisao = collideRectCircle(this.x+20, this.y, this.largura*precisao, this.altura, (inimigo.x + (inimigo.largura/2))+25, (inimigo.y + (inimigo.altura/2)), inimigo.largura*0.6);
+    
+    /*
+    if (colisao===true){
+      noLoop();
+    }
+    */
+    this.colisao = colisao;
     return(colisao);
   }
 

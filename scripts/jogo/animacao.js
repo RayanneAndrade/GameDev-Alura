@@ -5,7 +5,7 @@ class Animacao {
     this.altura = altura;
     this.variacaoY = variacaoY;
     this.x = x;
-    this.y = height - this.altura - this.variacaoY;
+    this.y = windowHeight - this.altura - this.variacaoY;
     this.larguraSprite = larguraSprite;
     this.alturaSprite = alturaSprite;
 
@@ -21,7 +21,7 @@ class Animacao {
   exibe() {
     this.posX = this.frameAtual % this.qtdCol * this.larguraSprite;
     this.posY = Math.floor(this.frameAtual / this.qtdCol) * this.alturaSprite;
-
+    
     image(this.imagem, this.x, this.y, this.largura, this.altura, this.posX, this.posY, this.larguraSprite, this.alturaSprite);
 
     this.anima();

@@ -1,7 +1,7 @@
 function GameOver() {
   trilhaSonora.stop();
 
-  createCanvas(windowWidth, windowHeight, P2D);
+  createCanvas(windowWidth, windowHeight);
   image(gameover, ((windowWidth / 2) - (gameover.width / 2)), ((windowHeight / 2) - (gameover.height / 2)));
   pontuacao.exibePontuacaoFinal(gameover.height);
   noLoop();
